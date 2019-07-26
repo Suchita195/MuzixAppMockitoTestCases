@@ -84,4 +84,12 @@ public class TrackController extends GlobalExceptionHandler {
   {
     return new ResponseEntity<Track>(trackService.getTrackByName(name),HttpStatus.OK);
   }
+
+  //For the mapping of the top tracks from last fm
+  @GetMapping("toptrack")
+  public ResponseEntity<?> getTopTrack()
+  {
+    trackService.getTopTrack();
+    return new ResponseEntity<String>("Fetched",HttpStatus.OK);
+  }
 }
