@@ -22,7 +22,7 @@ public class TrackController extends GlobalExceptionHandler {
     this.trackService = trackService;
   }
 
-  //For save track
+  //For save the track
   @PostMapping("track")
   public ResponseEntity<?> saveTrack (@RequestBody Track track) throws TrackAlreadyExistsException{
     ResponseEntity responseEntity;
@@ -36,7 +36,7 @@ public class TrackController extends GlobalExceptionHandler {
     return responseEntity;
   }
 
-  //For update track
+  //For update the track
   @PutMapping("track")
   public ResponseEntity<?> updateTrack(@RequestBody Track track) {
     ResponseEntity responseEntity;

@@ -14,7 +14,7 @@ public interface TrackService {
   public Track updateTrack(Track track);
   //method to get all tracks
   public List<Track> getAllTracks();
-  //method to delete track
+  //method to delete the track
   public void deleteTrack(int id);
   //method to get track by id
   public Track getTrackById(int id) throws TrackNotFoundException;

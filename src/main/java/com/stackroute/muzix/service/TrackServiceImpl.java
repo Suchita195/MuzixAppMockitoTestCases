@@ -36,6 +36,10 @@ public class TrackServiceImpl implements TrackService {
     }
     else {
       Track savedTrack = trackRepository.save(track);
+      if(savedTrack==null)
+      {
+        throw new TrackAlreadyExistsException("Track Already exists");
+      }
       return savedTrack;
     }
   }
@@ -92,6 +96,7 @@ public class TrackServiceImpl implements TrackService {
   public void getTopTrack()
   {
     RestTemplate restTemplate=new RestTemplate();
+    //URL of the source API from where we want to fetch the data
     String ResourceUrl
             = "http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=09d5dac8d10ef21c515f042c164fd32a&format=json";
     ResponseEntity<String> response

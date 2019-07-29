@@ -5,7 +5,7 @@ public class TrackAlreadyExistsException extends Exception {
 
     public TrackAlreadyExistsException()
     {
-
+      message="track already exists";
     }
 
     public TrackAlreadyExistsException(String message) {

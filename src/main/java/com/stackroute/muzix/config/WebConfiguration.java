@@ -17,7 +17,7 @@ import static springfox.documentation.builders.PathSelectors.regex;
 @Configuration
 @EnableSwagger2
 public class WebConfiguration {
-    //Bean for h2ServletRegistration
+  //Bean for h2ServletRegistration
     @Bean
     ServletRegistrationBean h2servletRegistration()
     {
@@ -33,6 +33,7 @@ public class WebConfiguration {
                 .select().apis(RequestHandlerSelectors.basePackage("com.stackroute.controller"))
                 .paths(regex("/track.*"))
                 .build();
+
     }
 
     //Application Event Listener

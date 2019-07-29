@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @Builder
 public class Track {
-  //properties
+  //properties of the class track
   @Id
   int id;
   String name;
